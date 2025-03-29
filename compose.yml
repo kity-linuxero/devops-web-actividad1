@@ -9,14 +9,14 @@ services:
       POSTGRES_PASSWORD: adminpassword
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+    expose:
+      - 5432
 
   app:
     build: .
     container_name: grupo1-app
     ports:
-      - "${PORT}:3000"
+      - "${EXT_PORT}:3000"
     depends_on:
       - database
     env_file:
