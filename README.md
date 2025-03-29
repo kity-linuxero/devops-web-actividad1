@@ -1,9 +1,11 @@
-## Sitio de prueba - Grupo 1
+# Aplicación para Trabajos prácticos - Grupo 1
 Aplicación web de prueba para actividades prácticas grupo 1 curso UTN DevOps.
 
-## Instrucciones para levantar app
+> [!NOTE]  
+> La aplicación para la actividad práctica N2, se ha optado por la **práctica exploratoria**. Es una aplicación escrita en NodeJS con una base de datos en PosgreSQL. La aplicación lee desde la base de datos el nombre de los integrantes del grupo. La aplicación y la base de datos corren sobre docker en contenedores separados.
 
-La siguiente aplicación es para leer de una base de datos los nombres de los integrantes
+
+## Instrucciones para levantar app
 
 ### Requisitos:
 
