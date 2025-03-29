@@ -1,0 +1,26 @@
+services:
+  database:
+    build: ./db
+    container_name: postgres-container
+    restart: always
+    environment:
+      POSTGRES_DB: grupo1
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: grupo1-app
+    ports:
+      - "${PORT}:3000"
+    depends_on:
+      - database
+    env_file:
+      - .env
+
+volumes:
+  postgres_data:
